@@ -1,6 +1,5 @@
 import { DropdownMenu } from "@kobalte/core";
 import { For, Show, createEffect, createSignal } from "solid-js";
-import { A, useLocation } from "solid-start";
 import { FiChevronDown, FiChevronUp } from "solid-icons/fi";
 
 interface TMenuLink {
@@ -10,8 +9,13 @@ interface TMenuLink {
   isChild?: boolean;
   isActive?: () => boolean;
 }
-export default function MenuLink({ title, href, items, isChild, isActive }: TMenuLink) {
-  const location = useLocation();
+export default function MenuLink({
+  title,
+  href,
+  items,
+  isChild,
+  isActive,
+}: TMenuLink) {
   const [open, setOpen] = createSignal(false);
 
   createEffect(() => {
@@ -22,19 +26,22 @@ export default function MenuLink({ title, href, items, isChild, isActive }: TMen
     if (!isActive?.() || !items?.length) return title;
 
     return (
-      items?.find((item) => item.href && location.pathname.includes(item.href))?.title ?? title
+      items?.find((item) => item.href && location.pathname.includes(item.href))
+        ?.title ?? title
     );
   };
 
   return (
     <DropdownMenu.Root open={open()} onOpenChange={setOpen}>
       <DropdownMenu.Trigger
-        class={`flex items-center gap-2 ${
-          isActive?.() ? "text-blue-500 font-medium" : "font-light"
-        } ${isChild ? "p-2" : ""}`}>
-        {href ? <A href={href}>{title}</A> : showTitle()}
+        class={`flex items-center gap-2 ${isActive?.() ? "text-blue-500 font-medium" : "font-light"
+          } ${isChild ? "p-2" : ""}`}
+      >
+        {href ? <a href={href}>{title}</a> : showTitle()}
         {items?.length && (
-          <DropdownMenu.Icon>{open() ? <FiChevronUp /> : <FiChevronDown />}</DropdownMenu.Icon>
+          <DropdownMenu.Icon>
+            {open() ? <FiChevronUp /> : <FiChevronDown />}
+          </DropdownMenu.Icon>
         )}
       </DropdownMenu.Trigger>
       <Show when={items?.length}>

@@ -12,8 +12,10 @@
     "noEmit": true,
     "isolatedModules": true,
     "baseUrl": "./",
+    "outDir": "./lib",
     "paths": {
       "~/*": ["./src/*"]
     }
-  }
+  },
+  "exclude": ["**/*.stories.tsx", "node_modules"]
 }

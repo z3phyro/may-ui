@@ -5,7 +5,7 @@ export interface InfoBlockProps {
   title: string;
   children: JSX.Element | string;
 }
-export function InfoBlock(props: InfoBlockProps) {
+export default function InfoBlock(props: InfoBlockProps) {
   return (
     <article class="text-gray-400 text-sm text-light">
       <h4 class="flex items-center gap-2 text-xs">
