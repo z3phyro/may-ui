@@ -1,5 +1,5 @@
 import { TextField } from "@kobalte/core";
-import { EUiVariant, TextVariantColor } from "../../../core/types/ui-variants.type";
+import { EUiVariant, TextVariantColor, } from "../../../core/types/ui-variants.type";
 export default function Input(props) {
     return (<TextField.Root class="relative group" validationState={props.hasError || props.error ? "invalid" : "valid"}>
       {props.label && (<TextField.Label class="text-gray-600 text-light text-sm">

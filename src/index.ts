@@ -29,3 +29,12 @@ export {
   type TToastContext,
   type TToastProviderProps,
 } from "./stories/providers";
+
+export {
+  EUiVariant,
+  type TUiVariant,
+  type TUiVariantDict,
+  BorderVariantColor,
+  BackgroundVariantColor,
+  TextVariantColor,
+} from "./core/types/ui-variants.type"

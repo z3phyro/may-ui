@@ -3,7 +3,7 @@ import {
   BackgroundVariantColor,
   EUiVariant,
   TUiVariant,
-} from "~/core/types/ui-variants.type";
+} from "../../../core/types/ui-variants.type";
 
 export interface TBadgeProps {
   variant?: TUiVariant;

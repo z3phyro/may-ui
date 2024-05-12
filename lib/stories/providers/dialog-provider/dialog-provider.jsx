@@ -1,4 +1,4 @@
-import { createContext, createEffect, createSignal, useContext } from "solid-js";
+import { createContext, createEffect, createSignal, useContext, } from "solid-js";
 import Modal from "../../../stories/components/modal";
 const DialogContext = createContext({
     show: () => console.error("DialogContext not properly initialized"),

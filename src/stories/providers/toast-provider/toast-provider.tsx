@@ -1,8 +1,8 @@
 import { JSX, createContext, useContext } from "solid-js";
-import Toast, { TToastProps } from "~/stories/components/toast/toast";
+import Toast, { TToastProps } from "../../../stories/components/toast/toast";
 import { Toast as KToast, toaster } from "@kobalte/core";
 import { Portal } from "solid-js/web";
-import { EUiVariant } from "~/core/types/ui-variants.type";
+import { EUiVariant } from "../../../core/types/ui-variants.type";
 
 type TToastType = Omit<TToastProps, "toastId">;
 type TToastTypeAux = Omit<TToastType, "variant">;
