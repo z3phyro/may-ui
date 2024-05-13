@@ -1,21 +1,20 @@
-import Badge from "./badge/badge";
-import Accordion from "./accordion/accordion";
-import Breadcrumbs from "./breadcrumbs/breadcrumbs";
-import Button from "./button/button";
-import Card from "./card/card";
-import Heading from "./heading/heading";
-import InfoBlock from "./info-block/info-block";
+import Badge from "./badge";
+import Accordion from "./accordion";
+import Breadcrumbs from "./breadcrumbs";
+import Button from "./button";
+import Card from "./card";
+import Heading from "./heading";
+import InfoBlock from "./info-block";
 import Input from "./input";
 import Main from "./main";
 import MenuLink from "./menu-link";
 import Modal from "./modal";
-import Spinner from "./spinner/spinner";
-import Switch from "./switch/switch";
+import Spinner from "./spinner";
+import Switch from "./switch";
 import Table from "./table";
 import Textarea from "./textarea";
 import Toast from "./toast";
-import Tooltip from "./tooltip/tooltip";
-import Typography from "./typography";
+import Tooltip from "./tooltip";
 
 export {
   Badge,
@@ -35,5 +34,4 @@ export {
   Textarea,
   Toast,
   Tooltip,
-  Typography,
 };

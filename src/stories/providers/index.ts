@@ -3,14 +3,14 @@ import {
   DialogProvider,
   TDialogContext,
   TDialogProviderProps,
-} from "./dialog-provider/dialog-provider";
+} from "./dialog-provider";
 
 import {
   useToast,
   ToastProvider,
   TToastContext,
   TToastProviderProps,
-} from "./toast-provider/toast-provider";
+} from "./toast-provider";
 
 export {
   useDialog,

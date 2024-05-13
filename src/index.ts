@@ -16,7 +16,6 @@ export {
   Textarea,
   Toast,
   Tooltip,
-  Typography,
 } from "./stories/components";
 
 export {
