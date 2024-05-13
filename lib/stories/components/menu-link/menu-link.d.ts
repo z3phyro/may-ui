@@ -1,4 +1,4 @@
-interface TMenuLink {
+export interface TMenuLink {
     title: string;
     href?: string;
     items?: TMenuLink[];
@@ -6,4 +6,3 @@ interface TMenuLink {
     isActive?: () => boolean;
 }
 export default function MenuLink({ title, href, items, isChild, isActive, }: TMenuLink): import("solid-js").JSX.Element;
-export {};

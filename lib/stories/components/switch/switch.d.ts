@@ -1,7 +1,7 @@
 import "./styles.css";
-export interface SwitchProps {
+export interface TSwitchProps {
     onChange?: (val: boolean) => void;
     checked: boolean;
     label?: string;
 }
-export default function Switch(props: SwitchProps): import("solid-js").JSX.Element;
+export default function Switch(props: TSwitchProps): import("solid-js").JSX.Element;

@@ -2,11 +2,11 @@ import { Tooltip as KTooltip } from "@kobalte/core";
 import "./styles.css";
 import { JSX } from "solid-js";
 
-interface TooltipProps {
+export interface TTooltipProps {
   children: JSX.Element | JSX.Element[];
   content: JSX.Element | string;
 }
-export default function Tooltip(props: TooltipProps) {
+export default function Tooltip(props: TTooltipProps) {
   return (
     <KTooltip.Root>
       <KTooltip.Trigger>{props.children}</KTooltip.Trigger>

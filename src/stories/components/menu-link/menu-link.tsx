@@ -2,7 +2,7 @@ import { DropdownMenu } from "@kobalte/core";
 import { For, Show, createEffect, createSignal } from "solid-js";
 import { FiChevronDown, FiChevronUp } from "solid-icons/fi";
 
-interface TMenuLink {
+export interface TMenuLink {
   title: string;
   href?: string;
   items?: TMenuLink[];

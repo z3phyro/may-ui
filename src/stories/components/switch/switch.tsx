@@ -2,12 +2,12 @@ import { Switch as KSwitch } from "@kobalte/core";
 import "./styles.css";
 import { createSignal } from "solid-js";
 
-export interface SwitchProps {
+export interface TSwitchProps {
   onChange?: (val: boolean) => void;
   checked: boolean;
   label?: string;
 }
-export default function Switch(props: SwitchProps) {
+export default function Switch(props: TSwitchProps) {
   const [checked, setChecked] = createSignal(props.checked);
 
   const handleChange = (val: boolean) => {
