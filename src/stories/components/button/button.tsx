@@ -6,8 +6,8 @@ import {
   EUiVariant,
   RingColor,
   TUiVariant,
-} from "../../../core/types/ui-variants.type";
-import { cls } from "../../../utils/class.helper";
+} from "~/core/types/ui-variants.type";
+import { cls } from "~/utils/class.helper";
 
 export interface TButtonProps {
   children?: JSX.Element | JSX.Element[] | string;
@@ -38,7 +38,7 @@ export default function Button(props: TButtonProps) {
       {...(props.href && {
         as: "a",
       })}
-      {...{ href: props.href }}
+      href={props.href}
       onClick={props.onClick}
       disabled={props.disabled}
       data-testId={props.testId}

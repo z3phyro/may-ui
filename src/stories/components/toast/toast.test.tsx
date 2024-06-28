@@ -2,7 +2,7 @@ import { expect, test } from "vitest";
 import { render } from "@solidjs/testing-library";
 import Toast from "./toast";
 import { Toast as KToast } from "@kobalte/core";
-import { BorderColor, EUiVariant } from "../../../core/types/ui-variants.type";
+import { BorderColor, EUiVariant } from "~/core/types/ui-variants.type";
 
 test("Toast renders", () => {
   const { getByRole } = render(() => <KToast.Region>

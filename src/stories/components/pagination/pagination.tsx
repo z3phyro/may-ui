@@ -1,5 +1,5 @@
 import { Pagination } from "@kobalte/core";
-import { cls } from "../../../utils/class.helper";
+import { cls } from "~/utils/class.helper";
 
 export interface TPaginationProps {
   class?: string;

@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
 import { render } from "@solidjs/testing-library";
 import Accordion from "./accordion";
-import { BackgroundColor, EUiVariant } from "../../../core/types/ui-variants.type";
+import { BackgroundColor, EUiVariant } from "~/core/types/ui-variants.type";
 
 /*Commented until issue with jsx gets solved*/
 test("Accordion renders", () => {

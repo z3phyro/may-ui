@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
 import { render } from "@solidjs/testing-library";
 import Badge from "./badge";
-import { BackgroundColor, EUiVariant } from "../../../core/types/ui-variants.type";
+import { BackgroundColor, EUiVariant } from "~/core/types/ui-variants.type";
 
 test("Badge renders", () => {
   const { getByRole } = render(() => <Badge>1</Badge>);

@@ -1,6 +1,6 @@
 import { For, JSX } from "solid-js";
 import Tooltip from "../tooltip/tooltip";
-import { cls } from "../../../utils/class.helper";
+import { cls } from "~/utils/class.helper";
 
 export interface TTableAction {
   content: JSX.Element | string;
@@ -62,10 +62,11 @@ export default function Table(props: TTableProps) {
                       {props.actions.map((action) => (
                         <Tooltip
                           content={action.hint}
+                          onClick={() => action.action?.((k()))}
                         >
-                          <button class="hover:text-blue-500" onClick={() => action.action?.((k()))}>
+                          <div class="hover:text-blue-500" >
                             {action.content}
-                          </button>
+                          </div>
                         </Tooltip>
                       ))}
                     </div>
