@@ -8,11 +8,16 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"],
+    "types": [
+      "vite/client"
+    ],
     "noEmit": true,
     "isolatedModules": true,
     "baseUrl": "./",
     "outDir": "./lib"
   },
-  "exclude": ["**/*.stories.tsx", "node_modules"]
+  "exclude": [
+    "**/*.stories.tsx",
+    "node_modules"
+  ]
 }

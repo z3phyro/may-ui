@@ -1,23 +1,32 @@
 {
   "name": "@z3phyro/may-ui",
-  "version": "0.0.10",
+  "version": "0.0.23",
   "description": "A solid UI",
   "files": [
     "lib"
   ],
+  "type": "module",
   "main": "./lib/index.js",
-  "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "solid": "./lib/index.jsx",
+      "default": "./lib/index.js"
+    }
+  },
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "build-lib": "rm -rf lib && npx tsc -p build.tsconfig.json && copyfiles -u 1 src/**/*.css lib",
+    "build-lib": "rm -rf lib && npx tsc -p build.tsconfig.json && copyfiles -u 1 src/**/*.css lib && cp lib/index.js lib/index.jsx",
     "serve": "vite preview",
     "copy-css": "copyfiles -u 1 src/**/*.css lib"
   },
   "license": "MIT",
   "devDependencies": {
+    "@solidjs/testing-library": "^0.8.8",
+    "@testing-library/user-event": "^14.5.2",
     "autoprefixer": "^10.4.16",
     "copyfiles": "^2.4.1",
     "postcss": "^8.4.31",
@@ -27,10 +36,12 @@
     "tsc-alias": "^1.8.8",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
-    "vite-plugin-solid": "^2.7.0"
+    "vite-plugin-solid": "^2.7.0",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@kobalte/core": "^0.11.2",
+    "@solidjs/router": "^0.13.6",
     "solid-icons": "^1.1.0",
     "solid-js": "^1.7.3",
     "vite-tsconfig-paths": "^4.2.1"
