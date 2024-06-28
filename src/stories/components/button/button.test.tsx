@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
 import { render } from "@solidjs/testing-library";
 import Button from "./button";
-import { BackgroundColor, EUiVariant } from "~/core/types/ui-variants.type";
+import { BackgroundColor, EUiVariant } from "../../../core/types/ui-variants.type";
 
 test("Button renders", () => {
   const { getByRole } = render(() => <Button />);

@@ -3,8 +3,8 @@ import {
   EUiVariant,
   TUiVariant,
   BorderColor,
-} from "~/core/types/ui-variants.type";
-import { cls } from "~/utils/class.helper";
+} from "../../../core/types/ui-variants.type";
+import { cls } from "../../../utils/class.helper";
 
 export interface TToastProps {
   title: string;

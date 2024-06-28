@@ -1,7 +1,7 @@
 import { TextField } from "@kobalte/core";
 import { JSX } from "solid-js";
-import { EUiVariant, TextColor } from "~/core/types/ui-variants.type";
-import { cls } from "~/utils/class.helper";
+import { EUiVariant, TextColor } from "../../../core/types/ui-variants.type";
+import { cls } from "../../../utils/class.helper";
 
 export interface TInputProps {
   value?: string;

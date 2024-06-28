@@ -6,7 +6,7 @@ import {
   BorderColor,
   EUiVariant,
   TUiVariant,
-} from "~/core/types/ui-variants.type";
+} from "../../../core/types/ui-variants.type";
 import Card from "../card";
 import ChevronDownIcon from "../icons/chevron-down.icon";
 

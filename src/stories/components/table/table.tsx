@@ -1,6 +1,6 @@
 import { For, JSX } from "solid-js";
 import Tooltip from "../tooltip/tooltip";
-import { cls } from "~/utils/class.helper";
+import { cls } from "../../../utils/class.helper";
 
 export interface TTableAction {
   content: JSX.Element | string;

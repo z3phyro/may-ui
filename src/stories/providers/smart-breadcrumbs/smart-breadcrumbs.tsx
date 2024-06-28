@@ -2,7 +2,7 @@ import { useLocation } from "@solidjs/router";
 import { createMemo } from "solid-js";
 import Breadcrumbs from "../../../stories/components/breadcrumbs/breadcrumbs";
 import { deSlugify } from "../../../utils/slugify.helper";
-
+ 
 export default function SmartBreadcrumbs() {
   const location = useLocation();
   const pathname = createMemo(() => location.pathname);

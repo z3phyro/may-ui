@@ -1,11 +1,11 @@
 import { JSX } from "solid-js";
 import InfoIcon from "../icons/info.icon";
 
-export interface InfoBlockProps {
+export interface TInfoBlockProps {
   title?: string;
   children?: JSX.Element | string;
 }
-export function InfoBlock(props: InfoBlockProps) {
+export function InfoBlock(props: TInfoBlockProps) {
   return (
     <article class="text-gray-400 text-sm text-light">
       <h4 class="flex items-center gap-2 text-xs">
