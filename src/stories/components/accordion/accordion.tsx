@@ -1,14 +1,14 @@
 import { Accordion as KAccordion } from "@kobalte/core";
-import { FiChevronDown } from "solid-icons/fi";
 import { JSX } from "solid-js";
 import "./styles.css";
 import {
-  BackgroundVariantColor,
-  BorderVariantColor,
+  BackgroundColor,
+  BorderColor,
   EUiVariant,
   TUiVariant,
 } from "../../../core/types/ui-variants.type";
 import Card from "../card";
+import ChevronDownIcon from "../icons/chevron-down.icon";
 
 export type TAccordionItem = {
   header: JSX.Element | string;
@@ -20,6 +20,7 @@ export interface TAccordionProps {
   defaultValue?: string[];
   variant?: TUiVariant;
   disabled?: boolean;
+  testId?: string;
 }
 export default function Accordion(props: TAccordionProps) {
   return (
@@ -27,12 +28,13 @@ export default function Accordion(props: TAccordionProps) {
       class="accordion rounded"
       defaultValue={props.defaultValue}
       collapsible
+      role="list"
     >
       {props.items.map((item) => (
         <KAccordion.Item class={`accordion__item `} value={item.key}>
           <KAccordion.Header
-            class={`accordion__item-header rounded ${BorderVariantColor[props.variant ?? EUiVariant.White]
-              } ${BackgroundVariantColor[props.variant ?? EUiVariant.White]}`}
+            class={`accordion__item-header rounded ${BorderColor[props.variant ?? EUiVariant.White]
+              } ${BackgroundColor[props.variant ?? EUiVariant.White]}`}
           >
             <KAccordion.Trigger
               class="accordion__item-trigger"
@@ -40,7 +42,7 @@ export default function Accordion(props: TAccordionProps) {
             >
               {item.header}
               {!props.disabled && (
-                <FiChevronDown
+                <ChevronDownIcon
                   class="accordion__item-trigger-icon"
                   aria-hidden
                 />

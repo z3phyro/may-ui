@@ -6,7 +6,8 @@ import {
   useContext,
 } from "solid-js";
 import { TButtonProps } from "../../../stories/components/button/button";
-import Modal, { TModalProps } from "../../../stories/components/modal/modal";
+import Modal from "../../../stories/components/modal";
+import { TModalProps } from "../../../stories/components/modal/modal";
 
 export interface TDialogContext {
   show: (modalProps: TModalProps) => void;

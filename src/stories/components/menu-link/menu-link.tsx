@@ -1,6 +1,8 @@
 import { DropdownMenu } from "@kobalte/core";
 import { For, Show, createEffect, createSignal } from "solid-js";
-import { FiChevronDown, FiChevronUp } from "solid-icons/fi";
+import { A, useLocation } from "@solidjs/router";
+import ChevronDown from "../../../stories/components/icons/chevron-down.icon";
+import ChevronUp from "../../../stories/components/icons/chevron-up.icon";
 
 export interface TMenuLink {
   title: string;
@@ -16,6 +18,7 @@ export default function MenuLink({
   isChild,
   isActive,
 }: TMenuLink) {
+  const location = useLocation();
   const [open, setOpen] = createSignal(false);
 
   createEffect(() => {
@@ -37,10 +40,10 @@ export default function MenuLink({
         class={`flex items-center gap-2 ${isActive?.() ? "text-blue-500 font-medium" : "font-light"
           } ${isChild ? "p-2" : ""}`}
       >
-        {href ? <a href={href}>{title}</a> : showTitle()}
+        {href ? <A href={href}>{title}</A> : showTitle()}
         {items?.length && (
           <DropdownMenu.Icon>
-            {open() ? <FiChevronUp /> : <FiChevronDown />}
+            {open() ? <ChevronUp /> : <ChevronDown />}
           </DropdownMenu.Icon>
         )}
       </DropdownMenu.Trigger>

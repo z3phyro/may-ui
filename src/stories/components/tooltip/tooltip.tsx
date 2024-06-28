@@ -5,13 +5,20 @@ import { JSX } from "solid-js";
 export interface TTooltipProps {
   children: JSX.Element | JSX.Element[];
   content: JSX.Element | string;
+  id?: string;
 }
 export default function Tooltip(props: TTooltipProps) {
   return (
     <KTooltip.Root>
-      <KTooltip.Trigger>{props.children}</KTooltip.Trigger>
+      <KTooltip.Trigger
+        role="tooltip"
+        class="focus:ring-2 ring-offset-2 ring-blue-500 outline-none rounded-sm"
+        aria-describedby={props.id}
+      >
+        {props.children}
+      </KTooltip.Trigger>
       <KTooltip.Portal>
-        <KTooltip.Content class="tooltip__content">
+        <KTooltip.Content class="tooltip__content" id={props.id}>
           <KTooltip.Arrow />
           <p>{props.content}</p>
         </KTooltip.Content>

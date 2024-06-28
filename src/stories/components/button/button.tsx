@@ -2,10 +2,12 @@ import { JSX, children } from "solid-js";
 import { Button as KButton } from "@kobalte/core";
 import Spinner from "../spinner/spinner";
 import {
-  BackgroundVariantColor,
+  BackgroundColor,
   EUiVariant,
+  RingColor,
   TUiVariant,
 } from "../../../core/types/ui-variants.type";
+import { cls } from "../../../utils/class.helper";
 
 export interface TButtonProps {
   children?: JSX.Element | JSX.Element[] | string;
@@ -15,18 +17,32 @@ export interface TButtonProps {
   onClick?: () => void;
   loading?: boolean;
   class?: string;
+  href?: string;
+  testId?: string;
 }
 export default function Button(props: TButtonProps) {
   const solved = children(() => props.children);
 
   return (
     <KButton.Root
-      class={`flex items-center rounded  ${BackgroundVariantColor[props.variant ?? EUiVariant.Info]
-        } h-4 p-4 transition-all duration-300 ${props.disabled ? "bg-gray-300" : ""
-        } ${props.class}`}
+      class={cls({
+        "flex items-center justify-center sm:justify-start rounded ring-offset-1 focus:ring-2 outline-none w-full sm:w-fit":
+          true,
+        "bg-gray-300": !!props.disabled,
+        "h-4 p-4 transition-all duration-300": true,
+        [BackgroundColor[props.variant ?? EUiVariant.Info]]: true,
+        [RingColor[props.variant ?? EUiVariant.Info]]: true,
+        [props.class ?? ""]: !!props.class,
+      })}
       type={props.type ?? "button"}
+      {...(props.href && {
+        as: "a",
+      })}
+      {...{ href: props.href }}
       onClick={props.onClick}
       disabled={props.disabled}
+      data-testId={props.testId}
+      aria-busy={props.loading}
     >
       {props.loading && <Spinner class="ml-[-10px] mr-2" size={20} />}
       {solved()}

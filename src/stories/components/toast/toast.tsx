@@ -1,10 +1,10 @@
 import { Toast as KToast } from "@kobalte/core";
-import { FiX } from "solid-icons/fi";
 import {
   EUiVariant,
   TUiVariant,
-  BackgroundVariantColor,
+  BorderColor,
 } from "../../../core/types/ui-variants.type";
+import { cls } from "../../../utils/class.helper";
 
 export interface TToastProps {
   title: string;
@@ -17,20 +17,16 @@ export default function Toast(props: TToastProps) {
   return (
     <KToast.Root
       toastId={props.toastId}
-      class={`selection-none p-4 rounded-sm shadow w-[300px] flex flex-col justify-between mb-2 ${BackgroundVariantColor[props.variant ?? EUiVariant.Neutral]
-        }`}
+      class={cls({
+        "group block pointer-events-auto relative w-full items-center justify-between space-x-4 overflow-hidden rounded-md p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--kb-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--kb-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[opened]:animate-in data-[closed]:animate-out data-[swipe=end]:animate-out data-[closed]:fade-out-80 data-[closed]:slide-out-to-right-full data-[opened]:slide-in-from-top-full data-[opened]:sm:slide-in-from-bottom-full border-l-4 !border-t-gray-200 !border-r-gray-200 !border-b-gray-200 border":
+          true,
+        [BorderColor[props.variant ?? EUiVariant.Neutral]]: true,
+      })}
     >
-      <div class="flex justify-between">
-        <KToast.Title>{props.title}</KToast.Title>
-        <KToast.CloseButton>
-          <FiX />
-        </KToast.CloseButton>
-      </div>
-      {props.description && (
-        <KToast.Description class="text-sm">
-          {props.description}
-        </KToast.Description>
-      )}
+      <KToast.Title>{props.title}</KToast.Title>
+      <KToast.Description class="text-sm !ml-0">
+        {props.description}
+      </KToast.Description>
     </KToast.Root>
   );
 }
