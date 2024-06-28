@@ -5,6 +5,7 @@
   "files": [
     "lib"
   ],
+  "type": "module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "exports": {
