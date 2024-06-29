@@ -1,6 +1,6 @@
 {
   "name": "@z3phyro/may-ui",
-  "version": "0.0.23",
+  "version": "0.0.27",
   "description": "A solid UI",
   "files": [
     "lib"
@@ -13,17 +13,99 @@
       "types": "./lib/index.d.ts",
       "solid": "./lib/index.jsx",
       "default": "./lib/index.js"
+    },
+    "./accordion": {
+      "types": "./lib/stories/components/accordion/accordion.d.ts",
+      "solid": "./lib/stories/components/accordion/accordion.jsx",
+      "default": "./lib/stories/components/accordion/accordion.jsx"
+    },
+    "./badge": {
+      "types": "./lib/stories/components/badge/badge.d.ts",
+      "solid": "./lib/stories/components/badge/badge.jsx",
+      "default": "./lib/stories/components/badge/badge.jsx"
+    },
+    "./breadcrumbs": {
+      "types": "./lib/stories/components/breadcrumbs/breadcrumbs.d.ts",
+      "solid": "./lib/stories/components/breadcrumbs/breadcrumbs.jsx",
+      "default": "./lib/stories/components/breadcrumbs/breadcrumbs.jsx"
+    },
+    "./button": {
+      "types": "./lib/stories/components/button/button.d.ts",
+      "solid": "./lib/stories/components/button/button.jsx",
+      "default": "./lib/stories/components/button/button.jsx"
+    },
+    "./card": {
+      "types": "./lib/stories/components/card/card.d.ts",
+      "solid": "./lib/stories/components/card/card.jsx",
+      "default": "./lib/stories/components/card/card.jsx"
+    },
+    "./heading": {
+      "types": "./lib/stories/components/heading/heading.d.ts",
+      "solid": "./lib/stories/components/heading/heading.jsx",
+      "default": "./lib/stories/components/heading/heading.jsx"
+    },
+    "./info-block": {
+      "types": "./lib/stories/components/info-block/info-block.d.ts",
+      "solid": "./lib/stories/components/info-block/info-block.jsx",
+      "default": "./lib/stories/components/info-block/info-block.jsx"
+    },
+    "./input": {
+      "types": "./lib/stories/components/input/input.d.ts",
+      "solid": "./lib/stories/components/input/input.jsx",
+      "default": "./lib/stories/components/input/input.jsx"
+    },
+    "./modal": {
+      "types": "./lib/stories/components/modal/modal.d.ts",
+      "solid": "./lib/stories/components/modal/modal.jsx",
+      "default": "./lib/stories/components/modal/modal.jsx"
+    },
+    "./sidebar": {
+      "types": "./lib/stories/components/sidebar/sidebar.d.ts",
+      "solid": "./lib/stories/components/sidebar/sidebar.jsx",
+      "default": "./lib/stories/components/sidebar/sidebar.jsx"
+    },
+    "./spinner": {
+      "types": "./lib/stories/components/spinner/spinner.d.ts",
+      "solid": "./lib/stories/components/spinner/spinner.jsx",
+      "default": "./lib/stories/components/spinner/spinner.jsx"
+    },
+    "./switch": {
+      "types": "./lib/stories/components/switch/switch.d.ts",
+      "solid": "./lib/stories/components/switch/switch.jsx",
+      "default": "./lib/stories/components/switch/switch.jsx"
+    },
+    "./table": {
+      "types": "./lib/stories/components/table/table.d.ts",
+      "solid": "./lib/stories/components/table/table.jsx",
+      "default": "./lib/stories/components/table/table.jsx"
+    },
+    "./textarea": {
+      "types": "./lib/stories/components/textarea/textarea.d.ts",
+      "solid": "./lib/stories/components/textarea/textarea.jsx",
+      "default": "./lib/stories/components/textarea/textarea.jsx"
+    },
+    "./toast": {
+      "types": "./lib/stories/components/toast/toast.d.ts",
+      "solid": "./lib/stories/components/toast/toast.jsx",
+      "default": "./lib/stories/components/toast/toast.jsx"
+    },
+    "./tooltip": {
+      "types": "./lib/stories/components/tooltip/tooltip.d.ts",
+      "solid": "./lib/stories/components/tooltip/tooltip.jsx",
+      "default": "./lib/stories/components/tooltip/tooltip.jsx"
     }
   },
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "build-lib": "rm -rf lib && npx tsc -p build.tsconfig.json && copyfiles -u 1 src/**/*.css lib && cp lib/index.js lib/index.jsx",
+    "build:clear": "rm -rf lib && rm build.tsconfig.tsbuildinfo",
+    "build:lib": "npx tsc -p build.tsconfig.json && copyfiles -u 1 src/**/*.css lib && cp lib/index.js lib/index.jsx",
     "serve": "vite preview",
     "copy-css": "copyfiles -u 1 src/**/*.css lib",
     "test": "vitest"
   },
+  "sideEffects": false,
   "license": "MIT",
   "devDependencies": {
     "@solidjs/testing-library": "^0.8.8",
