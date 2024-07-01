@@ -18,6 +18,11 @@
   "exclude": [
     "node_modules",
     "src/**/*.test.*",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "src/app.tsx",
+    "src/entry-client.tsx",
+    "src/entry-server.tsx",
+    "src/global.d.ts",
+    "src/routes/*.*"
   ]
 }
