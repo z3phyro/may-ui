@@ -23,6 +23,7 @@ export interface TInputProps {
   ref?: (element: HTMLInputElement) => void;
   class?: string;
   testId?: string;
+  type?: "text" | "password" | "email" | "number";
 }
 
 export default function Input(props: TInputProps) {
@@ -63,6 +64,7 @@ export default function Input(props: TInputProps) {
           "text-gray-400 cursor-not-allowed": !!props.disabled,
         })}
         value={props.value}
+        type={props.type ?? "text"}
         onInput={props.onInput}
         placeholder={props.placeholder}
         aria-invalid={!!props.error}
