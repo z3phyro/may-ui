@@ -12,8 +12,8 @@ test("Table renders", () => {
 test("Table renders with columns", () => {
   const { getByRole } = render(() => (
     <Table
-      columns={[{ name: "Test column" }]}
-      data={[["Test data"]]}
+      columns={[{ name: "Test column", accesor: "test" }]}
+      data={[{ test: "Test data" }]}
     />
   ));
 
@@ -24,8 +24,8 @@ test("Table renders with columns", () => {
 test("Table renders with data", () => {
   const { getByRole } = render(() => (
     <Table
-      columns={[{ name: "Test column" }]}
-      data={[["Test data"]]}
+      columns={[{ name: "Test column", accesor: "test" }]}
+      data={[{ test: "Test data" }]}
     />
   ));
 
@@ -36,8 +36,8 @@ test("Table renders with data", () => {
 test("Table renders with actions", () => {
   const { getByRole } = render(() => (
     <Table
-      columns={[{ name: "Test column" }]}
-      data={[["Test data"]]}
+      columns={[{ name: "Test column", accesor: "test" }]}
+      data={[{ test: "Test data" }]}
       actions={[{ content: "Test action", action: () => { }, hint: "Test hint" }]}
     />
   ));
@@ -50,8 +50,8 @@ test("Table calls action", () => {
   const action = vi.fn();
   const { getByRole } = render(() => (
     <Table
-      columns={[{ name: "Test column" }]}
-      data={[["Test data"]]}
+      columns={[{ name: "Test column", accesor: "test" }]}
+      data={[{ test: "Test data" }]}
       actions={[{ content: "Test action", action, hint: "Test hint" }]}
     />
   ));
@@ -64,8 +64,8 @@ test("Table calls action", () => {
 test("Table renders with custom class", () => {
   const { getByRole } = render(() => (
     <Table
-      columns={[{ name: "Test column" }]}
-      data={[["Test data"]]}
+      columns={[{ name: "Test column", accesor: "test" }]}
+      data={[{ test: "Test data" }]}
       class="test-class"
     />
   ));
@@ -78,7 +78,7 @@ test("Table renders with custom header renderer", () => {
   const { getByRole } = render(() => (
     <Table
       columns={[{ name: "Test column", renderHeader: () => <span>Test header</span> }]}
-      data={[["Test data"]]}
+      data={[{ test: "Test data" }]}
     />
   ));
 
@@ -90,7 +90,7 @@ test("Table renders with custom cell renderer", () => {
   const { getByRole } = render(() => (
     <Table
       columns={[{ name: "Test column", renderCell: () => <span>Test cell</span> }]}
-      data={[["Test data"]]}
+      data={[{ test: "Test data" }]}
     />
   ));
 
@@ -101,8 +101,8 @@ test("Table renders with custom cell renderer", () => {
 test("Table snapshot test", () => {
   const { asFragment } = render(() => (
     <Table
-      columns={[{ name: "Test column" }]}
-      data={[["Test data"]]}
+      columns={[{ name: "Test column", accesor: "test" }]}
+      data={[{ test: "Test data" }]}
     />
   ));
 

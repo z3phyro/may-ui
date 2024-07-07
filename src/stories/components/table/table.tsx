@@ -13,10 +13,11 @@ export interface TTableColumn {
   width?: string;
   renderHeader?: () => JSX.Element;
   renderCell?: (cell: any) => JSX.Element;
+  accessor?: string;
 }
 export interface TTableProps {
   columns: TTableColumn[];
-  data: any[][];
+  data: any[]
   actions?: TTableAction[];
   class?: string;
 }
@@ -46,13 +47,13 @@ export default function Table(props: TTableProps) {
           <For each={props.data}>
             {(row, k) => (
               <tr>
-                <For each={row}>
-                  {(cell, i) => (
+                <For each={columns()}>
+                  {(column, i) => (
                     <td
                       class={`${i() == 0 ? "pl-4 text-gray-800 " : ""
                         } text-gray-600 text-lg py-2 pr-4 w-auto`}
                     >
-                      {columns()[i()].renderCell?.(cell) ?? cell}
+                      {column.renderCell?.(row) ?? row[column.accessor ?? column.name.toLowerCase()]}
                     </td>
                   )}
                 </For>
