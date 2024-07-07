@@ -62,3 +62,5 @@ export {
   BackgroundColor,
   TextColor,
 } from "./core/types/ui-variants.type"
+
+export * from "./stories/components/icons";

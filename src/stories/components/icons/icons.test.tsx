@@ -7,15 +7,10 @@ import CoverageIcon from "./coverage.icon";
 import DeleteIcon from "./delete.icon";
 import DuplicateIcon from "./duplicate.icon";
 import EditIcon from "./edit.icon";
-import FeatureFlagsIcon from "./feature-flags.icon";
-import FeaturesIcon from "./features.icon";
 import FilterIcon from "./filter.icon";
 import InfoIcon from "./info.icon";
 import LinkIcon from "./link.icon";
-import ResourcesIcon from "./resources.icon";
-import ShelfIcon from "./shelf.icon";
 import StatsIcon from "./stats.icon";
-import TiresIcon from "./tires.icon";
 import TranslationIcon from "./translation.icon";
 import TrashIcon from "./trash.icon";
 import XIcon from "./x.icon";
@@ -125,36 +120,6 @@ test("Edit icon renders with custom class", () => {
   expect(editIcon.classList.contains("custom-class")).toBeTruthy();
 });
 
-test("Feature flags icon should render correctly", () => {
-  const { getByRole } = render(() => <FeatureFlagsIcon />);
-
-  const featureFlagsIcon = getByRole("img") as HTMLElement;
-  expect(featureFlagsIcon).toBeTruthy();
-});
-
-test("Feature flags icon renders with custom class", () => {
-  const { getByRole } = render(() => <FeatureFlagsIcon class="custom-class" />);
-
-  const featureFlagsIcon = getByRole("img") as HTMLElement;
-  expect(featureFlagsIcon).toBeTruthy();
-  expect(featureFlagsIcon.classList.contains("custom-class")).toBeTruthy();
-});
-
-test("Features icon should render correctly", () => {
-  const { getByRole } = render(() => <FeaturesIcon />);
-
-  const featuresIcon = getByRole("img") as HTMLElement;
-  expect(featuresIcon).toBeTruthy();
-});
-
-test("Features icon renders with custom class", () => {
-  const { getByRole } = render(() => <FeaturesIcon class="custom-class" />);
-
-  const featuresIcon = getByRole("img") as HTMLElement;
-  expect(featuresIcon).toBeTruthy();
-  expect(featuresIcon.classList.contains("custom-class")).toBeTruthy();
-});
-
 test("Filter icon renders correctly", () => {
   const { getByRole } = render(() => <FilterIcon />);
 
@@ -200,36 +165,6 @@ test("Link icon renders with custom class", () => {
   expect(linkIcon.classList.contains("custom-class")).toBeTruthy();
 });
 
-test("Resources icon should render correctly", () => {
-  const { getByRole } = render(() => <ResourcesIcon />);
-
-  const resourcesIcon = getByRole("img") as HTMLElement;
-  expect(resourcesIcon).toBeTruthy();
-});
-
-test("Resources icon renders with custom class", () => {
-  const { getByRole } = render(() => <ResourcesIcon class="custom-class" />);
-
-  const resourcesIcon = getByRole("img") as HTMLElement;
-  expect(resourcesIcon).toBeTruthy();
-  expect(resourcesIcon.classList.contains("custom-class")).toBeTruthy();
-});
-
-test("Shelf icon should render correctly", () => {
-  const { getByRole } = render(() => <ShelfIcon />);
-
-  const shelfIcon = getByRole("img") as HTMLElement;
-  expect(shelfIcon).toBeTruthy();
-});
-
-test("Shelf icon renders with custom class", () => {
-  const { getByRole } = render(() => <ShelfIcon class="custom-class" />);
-
-  const shelfIcon = getByRole("img") as HTMLElement;
-  expect(shelfIcon).toBeTruthy();
-  expect(shelfIcon.classList.contains("custom-class")).toBeTruthy();
-});
-
 test("Stats icon should render correctly", () => {
   const { getByRole } = render(() => <StatsIcon />);
 
@@ -243,21 +178,6 @@ test("Stats icon renders with custom class", () => {
   const statsIcon = getByRole("img") as HTMLElement;
   expect(statsIcon).toBeTruthy();
   expect(statsIcon.classList.contains("custom-class")).toBeTruthy();
-});
-
-test("Tires icon should render correctly", () => {
-  const { getByRole } = render(() => <TiresIcon />);
-
-  const tiresIcon = getByRole("img") as HTMLElement;
-  expect(tiresIcon).toBeTruthy();
-});
-
-test("Tires icon renders with custom class", () => {
-  const { getByRole } = render(() => <TiresIcon class="custom-class" />);
-
-  const tiresIcon = getByRole("img") as HTMLElement;
-  expect(tiresIcon).toBeTruthy();
-  expect(tiresIcon.classList.contains("custom-class")).toBeTruthy();
 });
 
 test("Translation icon should render correctly", () => {

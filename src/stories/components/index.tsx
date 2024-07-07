@@ -66,3 +66,5 @@ export type {
   TToastProps,
   TTooltipProps,
 };
+
+export * from "./icons";
