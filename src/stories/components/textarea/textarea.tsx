@@ -1,9 +1,9 @@
 import { TextField } from "@kobalte/core";
+import { JSX } from "solid-js";
 
-export interface TTextareaProps {
+export interface TTextareaProps extends JSX.HTMLAttributes<HTMLTextAreaElement> {
   label?: string;
   value?: string;
-  onInput?: (event: Event) => void;
   placeholder?: string;
   rows?: number;
   class?: string;
@@ -13,7 +13,7 @@ export default function Textarea(props: TTextareaProps) {
   return (
     <TextField.Root class={props.class}>
       {props.label && (
-        <TextField.Label class="text-gray-600 text-light text-small">
+        <TextField.Label class="text-gray-600 text-light text-sm">
           {props.label}
         </TextField.Label>
       )}
