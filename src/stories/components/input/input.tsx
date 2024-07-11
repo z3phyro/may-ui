@@ -24,6 +24,7 @@ export interface TInputProps {
   class?: string;
   testId?: string;
   type?: "text" | "password" | "email" | "number";
+  autofocus?: boolean;
 }
 
 export default function Input(props: TInputProps) {
@@ -72,6 +73,7 @@ export default function Input(props: TInputProps) {
         disabled={props.disabled}
         required={props.required}
         data-testid={props.testId}
+        autofocus={props.autofocus}
       />
       <span
         role={props.trailingClick ? "button" : "img"}
