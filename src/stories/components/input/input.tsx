@@ -23,7 +23,7 @@ export interface TInputProps {
   ref?: (element: HTMLInputElement) => void;
   class?: string;
   testId?: string;
-  type?: "text" | "password" | "email" | "number";
+  type?: "text" | "password" | "email" | "number" | "color" | "date" | "datetime-local" | "month" | "tel" | "time" | "url" | "week";
   autofocus?: boolean;
 }
 
@@ -55,7 +55,7 @@ export default function Input(props: TInputProps) {
       <TextField.Input
         name={props.name ?? props.label}
         class={cls({
-          "w-full p-2 bg-white rounded mb-2 border outline-0 focus:shadow-md transition-all duration-300":
+          "w-full p-2 bg-white rounded mb-2 border outline-0 focus:shadow-md transition-all duration-300 min-h-[42px]":
             true,
           "border-red-500 focus:shadow-red-50 focus:border-red-500":
             !!props.error,
