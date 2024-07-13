@@ -25,6 +25,7 @@ export interface TInputProps {
   testId?: string;
   type?: "text" | "password" | "email" | "number" | "color" | "date" | "datetime-local" | "month" | "tel" | "time" | "url" | "week" | "file";
   autofocus?: boolean;
+  accept?: string;
 }
 
 export default function Input(props: TInputProps) {
@@ -72,6 +73,7 @@ export default function Input(props: TInputProps) {
         aria-errormessage={`${props.name}-error`}
         disabled={props.disabled}
         required={props.required}
+        accept={props.accept}
         data-testid={props.testId}
         autofocus={props.autofocus}
       />
