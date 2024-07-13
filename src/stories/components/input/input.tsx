@@ -23,7 +23,7 @@ export interface TInputProps {
   ref?: (element: HTMLInputElement) => void;
   class?: string;
   testId?: string;
-  type?: "text" | "password" | "email" | "number" | "color" | "date" | "datetime-local" | "month" | "tel" | "time" | "url" | "week";
+  type?: "text" | "password" | "email" | "number" | "color" | "date" | "datetime-local" | "month" | "tel" | "time" | "url" | "week" | "file";
   autofocus?: boolean;
 }
 
