@@ -71,6 +71,7 @@ export default function Input(props: TInputProps) {
         placeholder={props.placeholder}
         aria-invalid={!!props.error}
         aria-errormessage={`${props.name}-error`}
+        onchange={props.onChange}
         disabled={props.disabled}
         required={props.required}
         accept={props.accept}
