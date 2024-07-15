@@ -12,6 +12,12 @@ import StatsIcon from "./stats.icon";
 import TranslationIcon from "./translation.icon";
 import TrashIcon from "./trash.icon";
 import XIcon from "./x.icon";
+import { TIconProps } from "./icon.props";
+import FileStackIcon from "./file-stack.icon";
+import HomeIcon from "./home.icon";
+import LogoutIcon from "./logout.icon";
+import RocketIcon from "./rocket.icon";
+import TemplateIcon from "./template.icon";
 
 export {
   BurgerIcon,
@@ -28,4 +34,10 @@ export {
   TranslationIcon,
   TrashIcon,
   XIcon,
+  type TIconProps,
+  FileStackIcon,
+  HomeIcon,
+  LogoutIcon,
+  RocketIcon,
+  TemplateIcon,
 };
