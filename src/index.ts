@@ -41,6 +41,7 @@ export {
   type TToastProps,
   Tooltip,
   type TTooltipProps,
+  Upload,
 } from "./stories/components";
 
 export {

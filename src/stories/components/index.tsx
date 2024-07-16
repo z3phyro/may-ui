@@ -17,6 +17,7 @@ import Table, { TTableProps, TTableColumn, TTableAction } from "./table/table";
 import Textarea, { TTextareaProps } from "./textarea/textarea";
 import Toast, { TToastProps } from "./toast/toast";
 import Tooltip, { TTooltipProps } from "./tooltip/tooltip";
+import Upload from "./upload/upload";
 
 export {
   Accordion,
@@ -38,6 +39,7 @@ export {
   Textarea,
   Toast,
   Tooltip,
+  Upload,
 };
 
 export type {
